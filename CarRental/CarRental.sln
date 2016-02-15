@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Data.Tests", "Car
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Bootstrapper", "CarRental.Business.Bootstrapper\CarRental.Business.Bootstrapper.csproj", "{12BCBCFD-DF71-422C-90DB-76E947BFD571}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Contracts", "CarRental.Business.Contracts\CarRental.Business.Contracts.csproj", "{A8464787-60EF-4D85-AB80-E2699851DF27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Managers", "CarRental.Business.Managers\CarRental.Business.Managers.csproj", "{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{12BCBCFD-DF71-422C-90DB-76E947BFD571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12BCBCFD-DF71-422C-90DB-76E947BFD571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12BCBCFD-DF71-422C-90DB-76E947BFD571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8464787-60EF-4D85-AB80-E2699851DF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8464787-60EF-4D85-AB80-E2699851DF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8464787-60EF-4D85-AB80-E2699851DF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8464787-60EF-4D85-AB80-E2699851DF27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +99,7 @@ Global
 		{446DA90A-BCAB-4246-9ED6-7F96B2060C69} = {C22C3EB8-0F14-44B3-A261-8FB922B2D122}
 		{6FA175C1-4D09-4454-A37E-92145F825A05} = {B792E907-DAE7-4453-95EB-997D6D389364}
 		{12BCBCFD-DF71-422C-90DB-76E947BFD571} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
+		{A8464787-60EF-4D85-AB80-E2699851DF27} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
+		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 	EndGlobalSection
 EndGlobal
