@@ -1,4 +1,5 @@
-﻿using CarRental.Business.Contracts.Service_Contracts;
+﻿using CarRental.Business.Common;
+using CarRental.Business.Contracts.Service_Contracts;
 using CarRental.Business.Entities;
 using CarRental.Data.Contracts.Repository_Interfaces;
 using Core.Common.Contracts;
@@ -14,11 +15,14 @@ using System.Threading.Tasks;
 
 namespace CarRental.Business.Managers.Managers
 {
-    public class InventoryManager : IInventoryService
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall, 
+        ConcurrencyMode = ConcurrencyMode.Multiple,
+        ReleaseServiceInstanceOnTransactionComplete = false)]
+    public class InventoryManager : ManagerBase, IInventoryService
     {
         public InventoryManager()
         {
-            ObjectBase.Container.SatisfyImportsOnce(this);
+            
         }
 
         public InventoryManager(IDataRepositoryFactory dataRepositoryFactory)
@@ -26,13 +30,28 @@ namespace CarRental.Business.Managers.Managers
             _DataRepositoryFactory = dataRepositoryFactory;
         }
 
+        public InventoryManager(IBusinessEngineFactory businessEngineFactory)
+        {
+            _BusinessEngineFactory = businessEngineFactory;
+        }
+
+        public InventoryManager(IDataRepositoryFactory dataRepositoryFactory, IBusinessEngineFactory businessEngineFactory)
+        {
+            _DataRepositoryFactory = dataRepositoryFactory;
+            _BusinessEngineFactory = businessEngineFactory;
+        }
+
         [Import]
         IDataRepositoryFactory _DataRepositoryFactory;
-        
+
+        [Import]
+        IBusinessEngineFactory _BusinessEngineFactory;
+       
         public Car GetCar(int carId)
         {
-            try
+            return ExecuteFaultHandledOperation(() =>
             {
+
                 var carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
 
                 var carEntity = carRepository.Get(carId);
@@ -44,20 +63,13 @@ namespace CarRental.Business.Managers.Managers
                 }
 
                 return carEntity;
-            }
-            catch (FaultException ex)
-            {
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                throw new FaultException(ex.Message);
-            }
+
+            });
         }
 
         public Car[] GetAllCars()
         {
-            try
+            return ExecuteFaultHandledOperation(() =>
             {
                 var carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
                 var rentalRepository = _DataRepositoryFactory.GetDataRepository<IRentalRepository>();
@@ -72,11 +84,69 @@ namespace CarRental.Business.Managers.Managers
                 }
 
                 return cars.ToArray();
-            }
-            catch (Exception ex)
+            });
+        }
+
+        [OperationBehavior(TransactionScopeRequired = true)]
+        public Car UpdateCar(Car car)
+        {
+            return ExecuteFaultHandledOperation(() =>
             {
-                throw new FaultException(ex.Message);
-            }
+                var carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
+
+                Car updatedEntity = null;
+
+                if (car.CarId == 0)
+                {
+                    updatedEntity = carRepository.Add(car);
+                }
+                else
+                {
+                    updatedEntity = carRepository.Update(car);
+                }
+
+                return updatedEntity;
+
+            });
+        }
+
+        [OperationBehavior(TransactionScopeRequired = true)]
+        public void DeleteCar(int carId)
+        {
+            ExecuteFaultHandledOperation(() =>
+            {
+                var carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
+
+                carRepository.Remove(carId);
+            });
+        }
+
+        public Car[] GetAvailableCars(DateTime pickupDate, DateTime returnDate)
+        {
+            return ExecuteFaultHandledOperation(() =>
+            {
+                var carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
+                var rentalRepository = _DataRepositoryFactory.GetDataRepository<IRentalRepository>();
+                var reservationRepository = _DataRepositoryFactory.GetDataRepository<IReservationRepository>();
+
+                var carRentalEngine = _BusinessEngineFactory.GetBusinessEngine<ICarRentalEngine>();
+
+                var allCars = carRepository.Get();
+                var rentedCars = rentalRepository.GetCurrentlyRentedCars();
+                var reservedCars = reservationRepository.Get();
+
+                var availableCars = new List<Car>();
+
+                foreach (var car in allCars)
+                {
+                    if (carRentalEngine.IsCarAvailableForRental(car.CarId, pickupDate, returnDate, rentedCars, reservedCars))
+                    {
+                        availableCars.Add(car);
+                    }
+                }
+
+                return availableCars.ToArray();
+            });
         }
     }
 }

@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Contract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Managers", "CarRental.Business.Managers\CarRental.Business.Managers.csproj", "{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business", "CarRental.Business\CarRental.Business.csproj", "{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Common", "CarRental.Business.Common\CarRental.Business.Common.csproj", "{4AF175A0-7AB0-4213-B0EA-0978BB86B16B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,14 @@ Global
 		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +113,7 @@ Global
 		{12BCBCFD-DF71-422C-90DB-76E947BFD571} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 		{A8464787-60EF-4D85-AB80-E2699851DF27} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 		{D4634941-EAEA-4D88-9CB7-B4295A8FD9E1} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
+		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
+		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 	EndGlobalSection
 EndGlobal

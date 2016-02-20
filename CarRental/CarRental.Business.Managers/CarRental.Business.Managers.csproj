@@ -43,12 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\InventoryManager.cs" />
+    <Compile Include="Managers\ManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarRental.Business.Common\CarRental.Business.Common.csproj">
+      <Project>{4af175a0-7ab0-4213-b0ea-0978bb86b16b}</Project>
+      <Name>CarRental.Business.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarRental.Business.Contracts\CarRental.Business.Contracts.csproj">
       <Project>{a8464787-60ef-4d85-ab80-e2699851df27}</Project>
       <Name>CarRental.Business.Contracts</Name>
