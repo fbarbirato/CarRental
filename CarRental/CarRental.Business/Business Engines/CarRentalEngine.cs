@@ -19,7 +19,7 @@ namespace CarRental.Business.Business_Engines
         [ImportingConstructor]
         public CarRentalEngine(IDataRepositoryFactory dataRepositoryFactory)
         {
-
+            _DataRepositoryFactory = dataRepositoryFactory;
         }
 
         IDataRepositoryFactory _DataRepositoryFactory;

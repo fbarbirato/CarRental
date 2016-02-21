@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Managers\AccountManager.cs" />
     <Compile Include="Managers\InventoryManager.cs" />
     <Compile Include="ManagerBase.cs" />
     <Compile Include="Managers\RentalManager.cs" />

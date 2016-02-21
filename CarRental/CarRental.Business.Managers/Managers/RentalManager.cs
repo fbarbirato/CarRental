@@ -51,7 +51,6 @@ namespace CarRental.Business.Managers
         protected override Account LoadAuthorizationValidationAccount(string loginName)
         {
             var accountRepository = _DataRepositoryFactory.GetDataRepository<IAccountRepository>();
-
             var authAcct = accountRepository.GetByLogin(loginName);
 
             if (authAcct == null)
