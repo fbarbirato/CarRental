@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3213D2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Common", "CarRental.Common\CarRental.Common.csproj", "{BF56CBAB-D114-439A-822D-F6361D414DF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.ServiceModel", "Core.Common.ServiceModel\Core.Common.ServiceModel.csproj", "{612E67FE-3EF9-449D-B091-811E6F8E04E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{BF56CBAB-D114-439A-822D-F6361D414DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF56CBAB-D114-439A-822D-F6361D414DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF56CBAB-D114-439A-822D-F6361D414DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612E67FE-3EF9-449D-B091-811E6F8E04E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612E67FE-3EF9-449D-B091-811E6F8E04E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612E67FE-3EF9-449D-B091-811E6F8E04E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612E67FE-3EF9-449D-B091-811E6F8E04E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,5 +130,6 @@ Global
 		{3214E3AD-EFB6-4326-BE4A-1626AAB43ED0} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 		{4AF175A0-7AB0-4213-B0EA-0978BB86B16B} = {A9F93B38-5F2B-4565-A139-0783D02CF093}
 		{BF56CBAB-D114-439A-822D-F6361D414DF2} = {3213D2F7-1FE9-4516-8C9A-7555C232538B}
+		{612E67FE-3EF9-449D-B091-811E6F8E04E7} = {ACC78947-5D1C-4731-B480-5DBD10BD583C}
 	EndGlobalSection
 EndGlobal

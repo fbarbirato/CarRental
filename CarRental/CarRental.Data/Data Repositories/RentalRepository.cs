@@ -103,10 +103,5 @@ namespace CarRental.Data.Data_Repositories
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<CustomerRentalInfo> GetCurrentCustomerRentalInfo(int accountId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
