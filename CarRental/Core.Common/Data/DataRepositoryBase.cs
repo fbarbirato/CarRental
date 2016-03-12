@@ -1,4 +1,5 @@
 ﻿using Core.Common.Contracts;
+using Core.Common.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -56,7 +57,7 @@ namespace Core.Common.Data
             {
                 T existingEntity = UpdateEntity(entityContext, entity);
 
-                //SimpleMapper.PropertyMap(entity, existingEntity);
+                SimpleMapper.PropertyMap(entity, existingEntity);
 
                 entityContext.SaveChanges();
 
