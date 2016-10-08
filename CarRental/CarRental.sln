@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{E9F1F488-6AED-4A8E-8AF2-C2439BEC2653}"
 EndProject
@@ -50,6 +50,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Common.Contracts", "CarRental.Common.Contracts\CarRental.Common.Contracts.csproj", "{EDF0ACCF-FF7F-4CC9-92D0-A53151D3ACEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Managers.Tests", "CarRental.Business.Managers.Tests\CarRental.Business.Managers.Tests.csproj", "{BEE43DA8-2330-4B35-B503-4F7DD6DBE40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{AF6B9DEF-3074-403C-B00A-C4D06E48C11B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.ServiceHost.Console", "CarRental.ServiceHost.Console\CarRental.ServiceHost.Console.csproj", "{C66838CA-7BF9-4930-B67D-67D91F94C841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.ServiceHost.Tests", "CarRental.ServiceHost.Tests\CarRental.ServiceHost.Tests.csproj", "{42D55AA2-88C3-46E9-9F3A-17140B2CF67C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +135,14 @@ Global
 		{BEE43DA8-2330-4B35-B503-4F7DD6DBE40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEE43DA8-2330-4B35-B503-4F7DD6DBE40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEE43DA8-2330-4B35-B503-4F7DD6DBE40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66838CA-7BF9-4930-B67D-67D91F94C841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66838CA-7BF9-4930-B67D-67D91F94C841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66838CA-7BF9-4930-B67D-67D91F94C841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66838CA-7BF9-4930-B67D-67D91F94C841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,5 +166,7 @@ Global
 		{8B27A0BC-A741-410B-BCD6-02D9C7EAA518} = {B792E907-DAE7-4453-95EB-997D6D389364}
 		{EDF0ACCF-FF7F-4CC9-92D0-A53151D3ACEF} = {3213D2F7-1FE9-4516-8C9A-7555C232538B}
 		{BEE43DA8-2330-4B35-B503-4F7DD6DBE40E} = {B792E907-DAE7-4453-95EB-997D6D389364}
+		{C66838CA-7BF9-4930-B67D-67D91F94C841} = {AF6B9DEF-3074-403C-B00A-C4D06E48C11B}
+		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C} = {B792E907-DAE7-4453-95EB-997D6D389364}
 	EndGlobalSection
 EndGlobal

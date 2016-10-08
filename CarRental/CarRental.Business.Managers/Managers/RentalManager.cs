@@ -18,7 +18,8 @@ using System.Threading.Tasks;
 namespace CarRental.Business.Managers
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
-        ConcurrencyMode = ConcurrencyMode.Multiple)]
+        ConcurrencyMode = ConcurrencyMode.Multiple,
+        ReleaseServiceInstanceOnTransactionComplete = false)]
     public class RentalManager : ManagerBase, IRentalService
     {
         public RentalManager()
@@ -120,10 +121,6 @@ namespace CarRental.Business.Managers
                 }
             });
         }
-        
-        
-        
-        
         
         [OperationBehavior(TransactionScopeRequired = true)]
         [PrincipalPermission(SecurityAction.Demand, Role = Security.CarRentalAdminRole)]

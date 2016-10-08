@@ -21,7 +21,7 @@ namespace CarRental.Business.Contracts
         [TransactionFlow(TransactionFlowOption.Allowed)]
         Rental RentCarToCustomer(string loginEmail, int carId, DateTime dateDueBack);
 
-        [OperationContract]
+        [OperationContract(Name = "RentCarToCustomerImmediately")]
         [FaultContract(typeof(UnableToRentForDateException))]
         [FaultContract(typeof(CarCurrentlyRentedException))]
         [FaultContract(typeof(NotFoundException))]
