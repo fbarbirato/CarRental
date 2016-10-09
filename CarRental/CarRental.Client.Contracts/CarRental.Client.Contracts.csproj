@@ -54,6 +54,10 @@
       <Project>{13db3d6d-a020-4932-9ea4-0f18d19523fc}</Project>
       <Name>CarRental.Client.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{e7badf3f-5377-4af1-91f6-b38653c3a43c}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core.Common.ServiceModel\Core.Common.ServiceModel.csproj">
       <Project>{612e67fe-3ef9-449d-b091-811e6f8e04e7}</Project>
       <Name>Core.Common.ServiceModel</Name>
