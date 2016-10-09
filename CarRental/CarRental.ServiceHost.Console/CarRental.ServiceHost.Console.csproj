@@ -32,9 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,15 +61,60 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarRental.Business.Bootstrapper\CarRental.Business.Bootstrapper.csproj">
+      <Project>{12bcbcfd-df71-422c-90db-76e947bfd571}</Project>
+      <Name>CarRental.Business.Bootstrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Business.Common\CarRental.Business.Common.csproj">
+      <Project>{4af175a0-7ab0-4213-b0ea-0978bb86b16b}</Project>
+      <Name>CarRental.Business.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarRental.Business.Contracts\CarRental.Business.Contracts.csproj">
       <Project>{a8464787-60ef-4d85-ab80-e2699851df27}</Project>
       <Name>CarRental.Business.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CarRental.Business.Entities\CarRental.Business.Entities.csproj">
+      <Project>{86270b8e-bfc1-4318-b027-6ac26805fd08}</Project>
+      <Name>CarRental.Business.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarRental.Business.Managers\CarRental.Business.Managers.csproj">
       <Project>{d4634941-eaea-4d88-9cb7-b4295a8fd9e1}</Project>
       <Name>CarRental.Business.Managers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Business\CarRental.Business.csproj">
+      <Project>{3214e3ad-efb6-4326-be4a-1626aab43ed0}</Project>
+      <Name>CarRental.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Common.Contracts\CarRental.Common.Contracts.csproj">
+      <Project>{edf0accf-ff7f-4cc9-92d0-a53151d3acef}</Project>
+      <Name>CarRental.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Common\CarRental.Common.csproj">
+      <Project>{bf56cbab-d114-439a-822d-f6361d414df2}</Project>
+      <Name>CarRental.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Data.Contracts\CarRental.Data.Contracts.csproj">
+      <Project>{446da90a-bcab-4246-9ed6-7f96b2060c69}</Project>
+      <Name>CarRental.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Data\CarRental.Data.csproj">
+      <Project>{a2d0c303-ce22-4415-8adc-c12c4f6e15d7}</Project>
+      <Name>CarRental.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
+      <Project>{e7badf3f-5377-4af1-91f6-b38653c3a43c}</Project>
+      <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common.ServiceModel\Core.Common.ServiceModel.csproj">
+      <Project>{612e67fe-3ef9-449d-b091-811e6f8e04e7}</Project>
+      <Name>Core.Common.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{387a9804-aeda-43b3-acf6-8a51240749c9}</Project>
+      <Name>Core.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
