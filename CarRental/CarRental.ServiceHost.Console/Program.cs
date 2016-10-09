@@ -54,11 +54,8 @@ namespace CarRental.ServiceHost
 
         private static void OnTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            CancelDeadReservations();
-        }
+            Console.WriteLine("Looking for dead reservations at {0}.", DateTime.Now.ToString());
 
-        private static void CancelDeadReservations()
-        {
             var rentalManager = new RentalManager();
 
             var reservations = rentalManager.GetDeadReservations();
@@ -72,6 +69,7 @@ namespace CarRental.ServiceHost
                         try
                         {
                             rentalManager.CancelReservation(reservation.ReservationId);
+                            Console.WriteLine("Canceling reservation '{0}'.", reservation.ReservationId);
                             scope.Complete();
                         }
                         catch (Exception)
