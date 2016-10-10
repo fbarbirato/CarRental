@@ -47,6 +47,7 @@
     <Compile Include="Service Proxies\InventoryClient.cs" />
     <Compile Include="Service Proxies\RentalClient.cs" />
     <Compile Include="Service Proxies\AccountClient.cs" />
+    <Compile Include="ServiceFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarRental.Client.Contracts\CarRental.Client.Contracts.csproj">

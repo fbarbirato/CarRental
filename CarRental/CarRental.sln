@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Contracts"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Proxies", "CarRental.Client.Proxies\CarRental.Client.Proxies.csproj", "{3184509A-EB0B-4122-854F-E76A5572483B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Bootstrapper", "CarRental.Client.Bootstrapper\CarRental.Client.Bootstrapper.csproj", "{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Proxies.Tests", "CarRental.Client.Proxies.Tests\CarRental.Client.Proxies.Tests.csproj", "{EE528C5A-44E0-45C1-A079-3F5F48CD382A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +159,14 @@ Global
 		{3184509A-EB0B-4122-854F-E76A5572483B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3184509A-EB0B-4122-854F-E76A5572483B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3184509A-EB0B-4122-854F-E76A5572483B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE528C5A-44E0-45C1-A079-3F5F48CD382A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE528C5A-44E0-45C1-A079-3F5F48CD382A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE528C5A-44E0-45C1-A079-3F5F48CD382A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE528C5A-44E0-45C1-A079-3F5F48CD382A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,5 +194,7 @@ Global
 		{42D55AA2-88C3-46E9-9F3A-17140B2CF67C} = {B792E907-DAE7-4453-95EB-997D6D389364}
 		{31A35D72-15CE-4C23-B720-5AE00B0D30A0} = {E9F1F488-6AED-4A8E-8AF2-C2439BEC2653}
 		{3184509A-EB0B-4122-854F-E76A5572483B} = {E9F1F488-6AED-4A8E-8AF2-C2439BEC2653}
+		{02450D27-6ADB-47E7-A47B-AF4BC7E3B6A4} = {E9F1F488-6AED-4A8E-8AF2-C2439BEC2653}
+		{EE528C5A-44E0-45C1-A079-3F5F48CD382A} = {B792E907-DAE7-4453-95EB-997D6D389364}
 	EndGlobalSection
 EndGlobal
