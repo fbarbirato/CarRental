@@ -2,17 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using CarRental.Client.Entities;
 using System.ComponentModel.Composition;
+using Core.Common.ServiceModel;
 
 namespace CarRental.Client.Proxies.Service_Proxies
 {
     [Export(typeof(IInventoryService))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public class InventoryClient : ClientBase<IInventoryService>, IInventoryService
+    public class InventoryClient : UserClientBase<IInventoryService>, IInventoryService
     {
         public void DeleteCar(int carId)
         {

@@ -2,18 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using CarRental.Client.Contracts.Data_Contracts;
 using CarRental.Client.Entities;
 using System.ComponentModel.Composition;
+using Core.Common.ServiceModel;
 
 namespace CarRental.Client.Proxies.Service_Proxies
 {
     [Export(typeof(IRentalService))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public class RentalClient : ClientBase<IRentalService>, IRentalService
+    public class RentalClient : UserClientBase<IRentalService>, IRentalService
     {
         public void AcceptCarReturn(int carId)
         {
